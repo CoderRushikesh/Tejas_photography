@@ -1,0 +1,21 @@
+footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:72px var(--pad) 36px;}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:52px;}
+.foot-brand{font-family:var(--serif);font-size:2.2rem;color:var(--white);margin-bottom:14px;letter-spacing:.08em;}
+.foot-brand span{color:var(--gold);}
+.foot-quote{font-family:var(--body);font-size:.78rem;font-style:italic;color:rgba(255,255,255,.38);line-height:1.8;}
+.foot-col-title{font-size:.56rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.foot-col ul{list-style:none;}
+.foot-col li{margin-bottom:10px;}
+.foot-col a{font-size:.8rem;color:rgba(255,255,255,.48);text-decoration:none;transition:color .3s;font-family:var(--body);}
+.foot-col a:hover{color:var(--gold);}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.foot-copy{font-size:.6rem;color:rgba(255,255,255,.28);letter-spacing:.1em;}
+.foot-socs{display:flex;gap:10px;}
+.foot-soc{width:36px;height:36px;border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.48);text-decoration:none;font-size:.82rem;transition:all .3s;}
+.foot-soc:hover{border-color:var(--gold);color:var(--gold);}
+@media(max-width:900px){.foot-top{grid-template-columns:1fr 1fr;gap:36px;}}
+@media(max-width:480px){
+  footer{padding:52px var(--pad) 28px;}
+  .foot-top{grid-template-columns:1fr;gap:28px;}
+  .foot-bottom{flex-direction:column;align-items:flex-start;}
+}

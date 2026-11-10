@@ -1,0 +1,25 @@
+.pkgs{background:var(--dark);padding:90px var(--pad);position:relative;overflow:hidden;}
+.pkgs::before{content:'';position:absolute;top:-60px;right:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(196,148,74,.12),transparent 70%);border-radius:50%;pointer-events:none;}
+.pkg-head{text-align:center;margin-bottom:60px;}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.pkg{border:1px solid rgba(255,255,255,.1);padding:48px 36px;position:relative;overflow:hidden;transition:border-color .4s,transform .4s;}
+.pkg:hover{border-color:var(--gold);transform:translateY(-6px);}
+.pkg-feat{border-color:var(--gold);background:rgba(196,148,74,.06);}
+.pkg-badge{position:absolute;top:0;right:36px;background:var(--gold);color:var(--white);font-size:.48rem;letter-spacing:.3em;text-transform:uppercase;padding:6px 14px;}
+.pkg-name{font-family:var(--serif);font-size:1.8rem;color:var(--white);margin-bottom:6px;}
+.pkg-tag{font-size:.7rem;color:var(--gold);letter-spacing:.1em;margin-bottom:28px;}
+.pkg-price{display:flex;align-items:baseline;gap:4px;margin-bottom:28px;}
+.pkg-cur{font-size:1.2rem;color:var(--gold);}
+.pkg-num{font-family:var(--serif);font-size:2.8rem;color:var(--white);line-height:1;}
+.pkg-per{font-size:.68rem;color:rgba(255,255,255,.4);letter-spacing:.1em;margin-left:4px;}
+.pkg-feats{list-style:none;margin-bottom:36px;}
+.pkg-feats li{display:flex;gap:11px;align-items:flex-start;font-size:.8rem;color:rgba(255,255,255,.68);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);font-family:var(--body);}
+.pkg-feats li span{color:var(--gold);font-weight:700;flex-shrink:0;}
+.pkg-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:13px;text-align:center;border:1px solid var(--gold);color:var(--gold);font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;transition:all .35s;font-family:var(--sans);}
+.pkg-btn:hover,.pkg-btn-feat{background:var(--gold);color:var(--white);}
+@media(max-width:900px){.pkg-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){
+  .pkgs{padding:60px var(--pad);}
+  .pkg-grid{grid-template-columns:1fr;}
+  .pkg{padding:36px 24px;}
+}

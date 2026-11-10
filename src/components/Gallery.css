@@ -1,0 +1,33 @@
+.gallery{padding:90px var(--pad);}
+.gallery-head{text-align:center;margin-bottom:52px;}
+.g-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:28px;}
+.g-tab{font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;padding:9px 22px;border:1px solid var(--border);color:var(--light);background:none;font-family:var(--sans);font-weight:300;transition:all .3s;cursor:pointer;}
+.g-tab.active,.g-tab:hover{background:var(--dark);border-color:var(--dark);color:var(--white);}
+/* masonry: photos keep their own shape (portrait / landscape / square) */
+.g-grid{column-count:3;column-gap:8px;}
+.g-item{overflow:hidden;position:relative;cursor:pointer;break-inside:avoid;margin-bottom:8px;}
+.g-item img{width:100%;height:auto;transition:transform .6s ease;}
+.g-item:hover img{transform:scale(1.07);}
+.g-overlay{position:absolute;inset:0;background:rgba(0,0,0,0);display:flex;align-items:center;justify-content:center;transition:background .4s;}
+.g-overlay span{color:var(--white);font-size:.55rem;letter-spacing:.35em;text-transform:uppercase;opacity:0;transform:translateY(8px);transition:all .4s;}
+.g-item:hover .g-overlay{background:rgba(0,0,0,.3);}
+.g-item:hover .g-overlay span{opacity:1;transform:none;}
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:800;display:flex;align-items:center;justify-content:center;animation:lbIn .3s ease;}
+@keyframes lbIn{from{opacity:0;}to{opacity:1;}}
+.lb img{max-width:90vw;max-height:88vh;object-fit:contain;}
+.lb-close{position:absolute;top:20px;right:28px;background:none;border:none;color:var(--white);font-size:1.8rem;opacity:.7;transition:opacity .3s;}
+.lb-close:hover{opacity:1;}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--white);font-size:2.5rem;opacity:.6;padding:16px;transition:opacity .3s;}
+.lb-prev{left:12px;}.lb-next{right:12px;}
+.lb-prev:hover,.lb-next:hover{opacity:1;}
+@media(max-width:768px){
+  .gallery{padding:60px var(--pad);}
+  .g-grid{column-count:2;}
+}
+@media(max-width:480px){
+  .gallery{padding:50px var(--pad);}
+  .g-grid{column-count:2;column-gap:5px;}
+  .g-item{margin-bottom:5px;}
+  .g-tab{padding:8px 14px;font-size:.5rem;}
+}

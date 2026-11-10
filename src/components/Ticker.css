@@ -1,0 +1,5 @@
+.ticker{background:var(--dark);padding:14px 0;overflow:hidden;}
+.ticker-track{display:flex;white-space:nowrap;animation:tick 28s linear infinite;}
+.t-item{font-family:var(--body);font-size:.82rem;font-style:italic;color:var(--gold2);padding:0 22px;flex-shrink:0;}
+.t-dot{color:rgba(232,201,138,.3);flex-shrink:0;}
+@keyframes tick{from{transform:translateX(0);}to{transform:translateX(-50%);}}
