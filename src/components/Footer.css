@@ -9,7 +9,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding
 .foot-col a{font-size:.8rem;color:rgba(255,255,255,.48);text-decoration:none;transition:color .3s;font-family:var(--body);}
 .foot-col a:hover{color:var(--gold);}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
-.foot-copy{font-size:.6rem;color:rgba(255,255,255,.28);letter-spacing:.1em;}
+.foot-copy{font-size:.7rem;color:rgba(255, 255, 255, 0.712);letter-spacing:.1em;}
 .foot-socs{display:flex;gap:10px;}
 .foot-soc{width:36px;height:36px;border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.48);text-decoration:none;font-size:.82rem;transition:all .3s;}
 .foot-soc:hover{border-color:var(--gold);color:var(--gold);}

@@ -39,7 +39,7 @@ export default function Footer() {
         ))}
       </div>
       <div className="foot-bottom">
-        <p className="foot-copy">© 2026 Tejas Photography · Photography by Tejas Dolas · Pune, India</p>
+        <p className="foot-copy">© 2026 Tejas Photography · Photography by Tejas Dolas · Pune, India / Developed by 💯 Rushikesh Kamble</p>
         <div className="foot-socs">
           <a href={SITE.instagram} className="foot-soc" aria-label="Instagram" target="_blank" rel="noopener noreferrer">📷</a>
           <a href={SITE.facebook}  className="foot-soc" aria-label="Facebook"  target="_blank" rel="noopener noreferrer">f</a>

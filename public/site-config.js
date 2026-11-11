@@ -10,11 +10,10 @@ window.SITE_CONFIG = {
 
   // Shown on the page (any format you like)
   phoneDisplay: '+91 98765 43210',
-  email: 'hello@tejasphotography.in',
+ email: 'Dolastejas20@gmail.com',
   location: 'Pune, Maharashtra',
 
-  // Social links (full URLs). Leave '#' if you do not have one yet.
-  instagram: '#',
+  instagram: 'https://www.instagram.com/tejas_dolas_photography/',
   facebook: '#',
   youtube: '#',
 };

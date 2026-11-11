@@ -26,3 +26,7 @@
 .nav-login{margin-left:14px;padding:10px 18px;border:1px solid var(--dark);background:none;color:var(--dark);font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;font-family:var(--sans);}
 .nav-login:hover{background:var(--dark);color:var(--gold2);}
 @media(max-width:900px){.nav-login{display:none;}}
+
+.nav-login{margin-left:14px;padding:10px 18px;border:1px solid var(--dark);background:none;color:var(--dark);font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;font-family:var(--sans);}
+.nav-login:hover{background:var(--dark);color:var(--gold2);}
+@media(max-width:900px){.nav-login{display:none;}}

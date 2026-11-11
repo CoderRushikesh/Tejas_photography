@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import './index.css';
+import useRoute from './hooks/useRoute';
 import Cursor       from './components/Cursor';
 import Loader       from './components/Loader';
 import Navbar       from './components/Navbar';
@@ -20,12 +21,8 @@ import WhatsAppFloat from './components/WhatsAppFloat';
 import LocationMap from './components/LocationMap';
 import Login from './components/Login';
 import AdminDashboard from './components/AdminDashboard';
-import useRoute from './hooks/useReveal';
-
-
 
 export default function App() {
-
   const route = useRoute();
   const [loading, setLoading] = useState(true);
   const handleLoaderDone = useCallback(() => setLoading(false), []);
@@ -34,10 +31,9 @@ export default function App() {
     <>
       <Cursor />
       {loading && <Loader onDone={handleLoaderDone} />}
-     {!loading && route === '/login' && <Login />}
-{!loading && route === '/admin' && <AdminDashboard />}
-{!loading && route !== '/login' && route !== '/admin' && ( 
-      
+      {!loading && route === '/login' && <Login />}
+      {!loading && route === '/admin' && <AdminDashboard />}
+      {!loading && route !== '/login' && route !== '/admin' && (
         <>
           <Navbar />
           <Hero />
@@ -48,7 +44,7 @@ export default function App() {
           <Services />
           <Packages />
           <Testimonials />
-          <LocationMap/>
+          <LocationMap />
           <Process />
           <CtaBand />
           <Instagram />
