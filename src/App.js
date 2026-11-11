@@ -18,8 +18,15 @@ import Contact      from './components/Contact';
 import Footer       from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 import LocationMap from './components/LocationMap';
+import Login from './components/Login';
+import AdminDashboard from './components/AdminDashboard';
+import useRoute from './hooks/useReveal';
+
+
 
 export default function App() {
+
+  const route = useRoute();
   const [loading, setLoading] = useState(true);
   const handleLoaderDone = useCallback(() => setLoading(false), []);
 
@@ -27,7 +34,10 @@ export default function App() {
     <>
       <Cursor />
       {loading && <Loader onDone={handleLoaderDone} />}
-      {!loading && (
+     {!loading && route === '/login' && <Login />}
+{!loading && route === '/admin' && <AdminDashboard />}
+{!loading && route !== '/login' && route !== '/admin' && ( 
+      
         <>
           <Navbar />
           <Hero />

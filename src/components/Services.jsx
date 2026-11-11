@@ -3,10 +3,11 @@ import { SERVICES, waLink } from '../data/siteData';
 import WhatsAppIcon from './WhatsAppIcon';
 import useReveal from '../hooks/useReveal';
 import './Services.css';
-
+ import {goToInquiry} from '../utils/bookDate';
 export default function Services() {
   const headRef = useReveal();
   const gridRef = useReveal(0.05);
+  
   return (
     <section className="services" id="services">
       <div className="svc-head rv" ref={headRef}>
@@ -20,10 +21,11 @@ export default function Services() {
             <div className="svc-icon">{s.icon}</div>
             <h3 className="svc-name">{s.name}</h3>
             <p className="svc-desc">{s.desc}</p>
-            <a href={waLink(`Hi Tejas, I am interested in ${s.name}. Please share the details and availability.`)} className="svc-link" target="_blank" rel="noopener noreferrer">
+            {/* <a href={waLink(`Hi Tejas, I am interested in ${s.name}. Please share the details and availability.`)} className="svc-link" target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon size={15} /> Enquire on WhatsApp <span>→</span>
-            </a>
-            {/* <button>book date </button> */}
+            </a> */}
+
+           <button type="button" className="svc-book" onClick={() => goToInquiry({ service: s.name })}>Book Date</button>
           </div>
         ))}
       </div>

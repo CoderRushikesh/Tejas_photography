@@ -18,3 +18,5 @@
   .svc-grid{grid-template-columns:1fr;}
   .svc-card{padding:36px 24px;}
 }
+.svc-book{margin-top:14px;padding:10px 22px;background:var(--dark);color:var(--gold2);border:none;font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;font-family:var(--sans);}
+.svc-book:hover{background:var(--gold);color:#fff;}

@@ -3,7 +3,7 @@ import { IMAGES, waLink } from '../data/siteData';
 import WhatsAppIcon from './WhatsAppIcon';
 import useReveal from '../hooks/useReveal';
 import './CtaBand.css';
-
+ import {goToInquiry} from '../utils/bookDate';
 export default function CtaBand() {
   const lRef = useReveal();
   const rRef = useReveal();
@@ -18,8 +18,7 @@ export default function CtaBand() {
         <p className="sec-body muted-body">Our calendar fills up fast. Secure your date now and let us craft an unforgettable visual legacy of your most precious day.</p>
         {/* <a href=""> Check Availability  
         </a> */}
-        <button className='btn'>  → Check Availability </button>
-
+        <button className="btn" onClick={() => goToInquiry()}>→ Check Availability</button>
 
       
 

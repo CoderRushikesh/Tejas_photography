@@ -1,0 +1,26 @@
+.adm{min-height:100vh;background:var(--off);padding:90px 5vw 60px;}
+.adm-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:26px;}
+.adm-top .btn-primary{padding:10px 22px;margin-left:6px;}
+.adm-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:26px;}
+.adm-stat{background:#fff;border:1px solid var(--border);padding:18px;}
+.adm-stat b{display:block;font-family:var(--serif);font-size:2rem;font-weight:400;}
+.adm-stat span{font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--light);}
+.adm-grid{display:grid;grid-template-columns:260px 1fr;gap:20px;align-items:start;}
+.adm-box{background:#fff;border:1px solid var(--border);padding:16px;}
+.adm-h{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.adm-date{display:flex;justify-content:space-between;width:100%;padding:10px 12px;margin-bottom:6px;background:var(--off);border:1px solid var(--border);font-family:var(--sans);font-size:.8rem;}
+.adm-date.on{border-color:var(--gold);}
+.adm-date.clash,.adm-table tr.clash{background:#fdecea;border-color:#e57373;}
+.adm-table{overflow-x:auto;}
+.adm-search{width:100%;padding:11px 14px;border:1px solid var(--border);margin-bottom:12px;font-family:var(--sans);outline:none;}
+.adm-table table{width:100%;border-collapse:collapse;font-size:.8rem;min-width:760px;}
+.adm-table th{text-align:left;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--light);padding:8px;}
+.adm-table td{padding:10px 8px;border-top:1px solid var(--border);vertical-align:top;}
+.adm-warn{color:#b3261e;font-size:.7rem;margin-top:4px;}
+.tag{padding:3px 10px;font-size:.62rem;text-transform:uppercase;letter-spacing:.15em;background:var(--cream);}
+.tag.confirmed{background:#d9f2e1;color:#1b6b3a;}
+.tag.rejected{background:#eee;color:#888;}
+.adm-act{display:flex;flex-direction:column;gap:6px;}
+.adm-act button,.adm-act a{padding:7px 12px;border:1px solid var(--dark);background:none;font-size:.7rem;text-align:center;text-decoration:none;color:var(--dark);}
+.adm-act a{background:#25d366;border-color:#25d366;color:#fff;}
+@media(max-width:900px){.adm-grid{grid-template-columns:1fr;}}

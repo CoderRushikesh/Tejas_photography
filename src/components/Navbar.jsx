@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { waLink } from '../data/siteData';
 import WhatsAppIcon from './WhatsAppIcon';
 import './Navbar.css';
+ import api from '../api/api';
 
 const NAV = [
   { label:'About',        id:'about' },
@@ -29,6 +30,11 @@ export default function Navbar() {
     document.getElementById(id)?.scrollIntoView({ behavior:'smooth' });
   };
 
+  const s = api.getSession();
+const logout = () => { api.logout(); window.location.hash = '#/'; window.location.reload(); };
+const loginEl = s
+  ? (s.role === 'admin' ? <a href="#/admin" className="nav-login">Dashboard</a> : <button className="nav-login" onClick={logout}>Logout</button>)
+  : <a href="#/login" className="nav-login">Login</a>;
   return (
     <>
       <nav className={`nav${stuck ? ' stuck' : ''}`}>
